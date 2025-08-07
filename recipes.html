@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes - Recipe Book App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>🍳 Recipe Book App</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="recipes-header">
+            <h2>All Recipes</h2>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search recipes...">
+                <button onclick="searchRecipes()">Search</button>
+            </div>
+        </section>
+
+        <section class="recipe-filters">
+            <h3>Filter by Category:</h3>
+            <button onclick="filterCategory('all')">All</button>
+            <button onclick="filterCategory('breakfast')">Breakfast</button>
+            <button onclick="filterCategory('lunch')">Lunch</button>
+            <button onclick="filterCategory('dinner')">Dinner</button>
+            <button onclick="filterCategory('dessert')">Dessert</button>
+        </section>
+
+        <section class="recipe-grid" id="recipeGrid">
+            <!-- Sample recipes will be populated here -->
+            <div class="recipe-card">
+                <img src="images/pasta.jpg" alt="Pasta Carbonara">
+                <h4>Pasta Carbonara</h4>
+                <p>Italian classic with creamy sauce</p>
+                <button onclick="viewRecipe('pasta-carbonara')">View Recipe</button>
+            </div>
+            <div class="recipe-card">
+                <img src="images/salad.jpg" alt="Caesar Salad">
+                <h4>Caesar Salad</h4>
+                <p>Fresh and healthy option</p>
+                <button onclick="viewRecipe('caesar-salad')">View Recipe</button>
+            </div>
+            <div class="recipe-card">
+                <img src="images/cake.jpg" alt="Chocolate Cake">
+                <h4>Chocolate Cake</h4>
+                <p>Rich and decadent dessert</p>
+                <button onclick="viewRecipe('chocolate-cake')">View Recipe</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Recipe Book App. Made with ❤️ for food lovers.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
